@@ -1,31 +1,43 @@
 package com.iremkryt.rickandmortyapp.data.source.remote.dto
 
-
+import com.iremkryt.rickandmortyapp.domain.model.Character
 import com.google.gson.annotations.SerializedName
 
 data class CharacterDto(
     @SerializedName("created")
-    val created: String?,
+    val created: String,
     @SerializedName("episode")
     val episode: List<String>?,
     @SerializedName("gender")
-    val gender: String?,
+    val gender: String,
     @SerializedName("id")
-    val id: Int?,
+    val id: Int,
     @SerializedName("image")
-    val image: String?,
+    val image: String,
     @SerializedName("location")
-    val location: Location?,
+    val location: Location,
     @SerializedName("name")
-    val name: String?,
+    val name: String,
     @SerializedName("origin")
-    val origin: Origin?,
+    val origin: Origin,
     @SerializedName("species")
-    val species: String?,
+    val species: String,
     @SerializedName("status")
-    val status: String?,
+    val status: String,
     @SerializedName("type")
-    val type: String?,
+    val type: String,
     @SerializedName("url")
-    val url: String?
+    val url: String
 )
+fun CharacterDto.toCharacter(): Character {
+    return Character(
+        id = id,
+        name = name,
+        status = status,
+        species = species,
+        origin = origin,
+        gender = gender,
+        location = location,
+        image = image
+    )
+}

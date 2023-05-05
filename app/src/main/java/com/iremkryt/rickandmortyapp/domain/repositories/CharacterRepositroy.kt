@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface CharacterRepositroy {
 
-    fun getCharacters(page: Int): Flow<Result<List<Characters>>>
+    suspend fun getCharacters(page: Int): Flow<Result<List<Characters>>>
 
     suspend fun getCharacter(id: Int): Result<Character>
 }

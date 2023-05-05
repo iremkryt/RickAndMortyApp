@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.iremkryt.rickandmortyapp'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.iremkryt.rickandmortyapp"
@@ -72,6 +72,7 @@ dependencies {
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

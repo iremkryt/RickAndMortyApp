@@ -12,7 +12,10 @@ fun RickAndMortyApp() {
         val navigationActions = remember(navController) {
             RickAndMortyActions(navController)
         }
-
-
+        RickAndMortyNavGraph(
+            navController = navController,
+            navigateToHome = navigationActions.navigateToHome,
+            navigateToDetail = navigationActions.navigateToDetail
+        )
     }
 }
